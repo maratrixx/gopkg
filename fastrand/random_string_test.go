@@ -1,14 +1,15 @@
 package fastrand
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRandString(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		fmt.Println(RandString(30))
-	}
+	rs := RandString(30)
+	t.Logf("%+v\n", rs)
+	assert.Equal(t, 30, len(rs))
 }
 
 func BenchmarkRandString(b *testing.B) {

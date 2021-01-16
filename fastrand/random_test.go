@@ -4,30 +4,30 @@ import (
 	"math/rand"
 	"testing"
 	_ "unsafe"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestUint32(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		t.Log(Uint32())
-	}
+	v := Uint32()
+	t.Logf("%+v\n", v)
 }
 
 func TestUint64(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		t.Log(Uint64())
-	}
+	v := Uint64()
+	t.Logf("%+v\n", v)
 }
 
 func TestUint32N(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		t.Log(Uint32N(10))
-	}
+	v := Uint32N(10)
+	t.Logf("%+v\n", v)
+	assert.Equal(t, true, v < 10)
 }
 
 func TestUint64N(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		t.Log(Uint64N(100))
-	}
+	v := Uint64N(10)
+	t.Logf("%+v\n", v)
+	assert.Equal(t, true, v < 10)
 }
 
 func BenchmarkFastranUint32(b *testing.B) {

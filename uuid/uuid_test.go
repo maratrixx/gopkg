@@ -1,15 +1,18 @@
 package uuid
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestGenerateUUID(t *testing.T) {
-	for i := 0; i < 10; i++ {
-		fmt.Println(UUID())
-	}
+	uuid := UUID()
+	t.Logf("%v\n", uuid)
+
+	assert.Equal(t, 36, len(uuid))
 }
+
 func BenchmarkGenerateUUID(b *testing.B) {
 	b.RunParallel(func(p *testing.PB) {
 		for p.Next() {
