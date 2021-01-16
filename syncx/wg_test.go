@@ -27,12 +27,12 @@ func TestWaitGroupWrapper_Waitout(t *testing.T) {
 	wg.Add(1)
 
 	go rescue.RunWithRecover(func() {
-		time.Sleep(1 * time.Second)
+		time.Sleep(time.Second)
 		wg.Done()
 	})
 
 	t0 := time.Now()
-	res := wg.WaitTimeout(300 * time.Millisecond)
+	res := wg.WaitTimeout(100 * time.Millisecond)
 	assert.Equal(t, true, res)
 	t.Logf("wait_timeout for %s", time.Since(t0))
 }

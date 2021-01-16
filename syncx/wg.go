@@ -21,7 +21,14 @@ func (w *WaitGroupWrapper) WaitTimeout(timeout time.Duration) bool {
 	select {
 	case <-ch:
 		return false
-	case <-time.After(timeout):
-		return true
+	default:
+		timer := time.NewTimer(timeout)
+		select {
+		case <-ch:
+			timer.Stop()
+			return false
+		case <-timer.C:
+			return true
+		}
 	}
 }
