@@ -61,7 +61,7 @@ jobs:
       - name: Lint Go Code
         run: |
           export PATH=$PATH:$(go env GOPATH)/bin
-          go get -u https://github.com/golangci/golangci-lint/tree/master/cmd/golangci-lint
+          go get -u github.com/golangci/golangci-lint/cmd/golangci-lint
           golangci-lint run --enable-all
   test:
     name: Test
