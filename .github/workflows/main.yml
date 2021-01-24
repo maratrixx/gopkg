@@ -2,7 +2,7 @@
 
 # name: CI
 
-# # Controls when the action will run. 
+# # Controls when the action will run.
 # on:
 #   # Triggers the workflow on push or pull request events but only for the main branch
 #   push:
@@ -35,23 +35,25 @@
 #           echo Add other actions to build,
 #           echo test, and deploy your project.
 
+# =========================================================================================
+
 name: Lint and Test
 
 on:
   push:
-    branches: 
+    branches:
       - master
       - main
   pull_request:
 
-jobs: 
+jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go
         uses: actions/setup-go@v1
-        with: 
+        with:
           go-version: 1.15
       - name: Check out code
         uses: actions/checkout@v1
@@ -67,7 +69,7 @@ jobs:
     steps:
       - name: Set up Go
         uses: actions/setup-go@v1
-        with: 
+        with:
           go-version: 1.15
       - name: Check out code
         uses: actions/checkout@v1
