@@ -4,7 +4,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/imttx/golib/rescue"
+	"github.com/imttx/gopkg/rescue"
 )
 
 type WaitGroupWrapper struct {

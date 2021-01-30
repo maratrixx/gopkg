@@ -78,11 +78,11 @@ func BenchmarkStdUint32N(b *testing.B) {
 	})
 }
 
-// go test -benchmem -run=^$ -bench ^(BenchmarkFastranUint32|BenchmarkStdUint32|BenchmarkFastranUint64|BenchmarkStdUint64|BenchmarkFastrandUint32N|BenchmarkStdUint32N)$ github.com/imttx/golib/fastrand -v -count=1
+// go test -benchmem -run=^$ -bench ^(BenchmarkFastranUint32|BenchmarkStdUint32|BenchmarkFastranUint64|BenchmarkStdUint64|BenchmarkFastrandUint32N|BenchmarkStdUint32N)$ github.com/imttx/gopkg/fastrand -v -count=1
 //
 // goos: darwin
 // goarch: amd64
-// pkg: github.com/imttx/golib/fastrand
+// pkg: github.com/imttx/gopkg/fastrand
 // BenchmarkFastranUint32
 // BenchmarkFastranUint32-8     	1000000000	         0.891 ns/op	       0 B/op	       0 allocs/op
 // BenchmarkStdUint32
@@ -96,4 +96,4 @@ func BenchmarkStdUint32N(b *testing.B) {
 // BenchmarkStdUint32N
 // BenchmarkStdUint32N-8        	12233980	        96.4 ns/op	       0 B/op	       0 allocs/op
 // PASS
-// ok  	github.com/imttx/golib/fastrand	7.567s
+// ok  	github.com/imttx/gopkg/fastrand	7.567s

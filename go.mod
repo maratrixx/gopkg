@@ -1,4 +1,4 @@
-module github.com/imttx/golib
+module github.com/imttx/gopkg
 
 go 1.15
 
