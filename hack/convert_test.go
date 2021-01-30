@@ -84,11 +84,11 @@ func BenchmarkToSlice(b *testing.B) {
 }
 
 // benchmark
-// go test -benchmem -run=^$ -bench ^(BenchmarkToStringStd|BenchmarkToString|BenchmarkToSliceStd|BenchmarkToSlice)$ github.com/imttx/golib/hack -v -count=1
+// go test -benchmem -run=^$ -bench ^(BenchmarkToStringStd|BenchmarkToString|BenchmarkToSliceStd|BenchmarkToSlice)$ github.com/imttx/gopkg/hack -v -count=1
 
 // goos: darwin
 // goarch: amd64
-// pkg: github.com/imttx/golib/hack
+// pkg: github.com/imttx/gopkg/hack
 // BenchmarkToStringStd
 // BenchmarkToStringStd-8   	66936225	        18.0 ns/op	      64 B/op	       1 allocs/op
 // BenchmarkToString
@@ -98,4 +98,4 @@ func BenchmarkToSlice(b *testing.B) {
 // BenchmarkToSlice
 // BenchmarkToSlice-8       	1000000000	         0.390 ns/op	       0 B/op	       0 allocs/op
 // PASS
-// ok  	github.com/imttx/golib/hack	3.320s
+// ok  	github.com/imttx/gopkg/hack	3.320s

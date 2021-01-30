@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/imttx/golib/rescue"
+	"github.com/imttx/gopkg/rescue"
 	"github.com/stretchr/testify/assert"
 )
 
